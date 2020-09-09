@@ -1,10 +1,2 @@
 #!/bin/bash
-drwxrwxr-x 2 vagrant vagrant 4096 Sep  9 08:26 .
-drwxrwxr-x 4 vagrant vagrant 4096 Sep  9 08:06 ..
--rw-rw-r-- 1 vagrant vagrant  158 Sep  9 08:08 0-current_working_directory
--rw-rw-r-- 1 vagrant vagrant   38 Sep  9 08:11 1-listit
--rw-rw-r-- 1 vagrant vagrant    8 Sep  9 08:14 2-bring_me_home
--rw-rw-r-- 1 vagrant vagrant  304 Sep  9 08:15 3-listfiles
--rw-rw-r-- 1 vagrant vagrant    7 Sep  9 08:14 3-listfiles~
--rw-rw-r-- 1 vagrant vagrant    8 Sep  9 08:26 4-listmorefiles
--rw-rw-r-- 1 vagrant vagrant   21 Sep  9 08:06 README.md 
+ls -al
