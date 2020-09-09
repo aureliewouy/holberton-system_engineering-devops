@@ -1,3 +1,4 @@
+#!/bin/bash
 drwxrwxr-x 2 1000 1000 4096 Sep  9 08:27 .
 drwxrwxr-x 4 1000 1000 4096 Sep  9 08:06 ..
 -rw-rw-r-- 1 1000 1000  158 Sep  9 08:08 0-current_working_directory

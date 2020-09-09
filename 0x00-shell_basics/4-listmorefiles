@@ -1,3 +1,4 @@
+#!/bin/bash
 drwxrwxr-x 2 vagrant vagrant 4096 Sep  9 08:26 .
 drwxrwxr-x 4 vagrant vagrant 4096 Sep  9 08:06 ..
 -rw-rw-r-- 1 vagrant vagrant  158 Sep  9 08:08 0-current_working_directory
