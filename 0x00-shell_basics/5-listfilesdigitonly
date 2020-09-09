@@ -1,12 +1,2 @@
 #!/bin/bash
-drwxrwxr-x 2 1000 1000 4096 Sep  9 08:27 .
-drwxrwxr-x 4 1000 1000 4096 Sep  9 08:06 ..
--rw-rw-r-- 1 1000 1000  158 Sep  9 08:08 0-current_working_directory
--rw-rw-r-- 1 1000 1000   38 Sep  9 08:11 1-listit
--rw-rw-r-- 1 1000 1000    8 Sep  9 08:14 2-bring_me_home
--rw-rw-r-- 1 1000 1000  304 Sep  9 08:15 3-listfiles
--rw-rw-r-- 1 1000 1000    7 Sep  9 08:14 3-listfiles~
--rw-rw-r-- 1 1000 1000  532 Sep  9 08:27 4-listmorefiles
--rw-rw-r-- 1 1000 1000    8 Sep  9 08:26 4-listmorefiles~
--rw-rw-r-- 1 1000 1000    8 Sep  9 08:27 5-listfilesdigitonly
--rw-rw-r-- 1 1000 1000   21 Sep  9 08:06 README.md 
+ls -la -n
