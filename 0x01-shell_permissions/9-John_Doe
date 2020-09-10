@@ -1,2 +1,2 @@
 #!/bin/bash
-chmdo 753 hello
+chmdo u+rwx,g+rx,o+wx hello
