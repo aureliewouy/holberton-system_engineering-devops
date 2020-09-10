@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 751 0x01-shell_permissions/dir_holberton
+mkdir -m 777 dir_holberton
