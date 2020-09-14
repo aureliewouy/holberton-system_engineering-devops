@@ -1,2 +1,2 @@
 #!/bin/bash
-echo DECIMAL=$((8#$BINARY))
+echo $((8#$BINARY))
