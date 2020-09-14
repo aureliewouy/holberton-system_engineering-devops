@@ -1,2 +1,3 @@
 #!/bin/bash
-echo $PATH | wc -l
+echo 'ibase=2;$BINARY' | bc
+
