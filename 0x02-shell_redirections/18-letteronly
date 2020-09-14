@@ -1,2 +1,2 @@
 #!/bin/bash
-find /etc/ssh/sshd_config -type f -name "a*z" "A*Z"
+find /etc/ssh/sshd_config -type f -name "a*z" -name "A*Z"
