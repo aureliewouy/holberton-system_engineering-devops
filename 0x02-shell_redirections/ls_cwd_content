@@ -1,0 +1,30 @@
+.
+..
+0-hello_world
+1-confused_smiley
+1-confused_smiley~
+2-hellofile
+2-hellofile~
+3-twofiles
+#4-lastlines#
+4-lastlines
+4-lastlines~
+5-firstlines
+5-firstlines~
+#6-third_line#
+6-third_line
+6-third_line~
+7-file
+7-file~
+7filee
+8-cwd_state
+.gitignore
+\*\\'Holberton
+\*\'Holberton School\'\*$\?\*\*\*\*\*:)
+\*\\\'"Holberton' 'School"\'\\*$\?\*\*\*\*\ \*:)
+\*\\\'Holberton School\'\\*$\?\*\*\*\*\
+\*:)
+iacta
+iacta~
+ls_cwd_content
+README.md
