@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Use of while, if, elif and else
+x=0
+while [ $x -lt 10 ];
+do
+    (( x++ ));
+    if [ $x -eq 4 ]
+    then
+	echo "bad luck"
+    elif [ $x -eq 8 ]
+    then
+        echo "good luck"
+    else
+	echo "Holberton School"
+    fi
+done

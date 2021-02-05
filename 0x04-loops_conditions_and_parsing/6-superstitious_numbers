@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Use of while and case
+x=0
+while [ $x -lt 20 ];
+do
+    (( x++ ));
+    echo $x;
+    case $x in
+	4)
+	echo "bad luck from China";;
+        9)
+	echo "bad luck from Japan";;
+	17)
+	echo "bad luck from Italy";;
+     esac
+done
