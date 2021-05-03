@@ -14,9 +14,9 @@ if __name__ == "__main__":
                 .format(usr)
             resp = requests.get(api_user)
             usr_name = resp.json().get("name")
-            aptodo = 'https://jsonplaceholder.typicode.com/todos/?userId={}' \
+            api_todo = 'https://jsonplaceholder.typicode.com/todos/?userId={}' \
                 .format(usr)
-            todos = requests.get(aptodo)
+            todos = requests.get(api_todo)
             todos_title = todos.json()
             usr_todo = []
             todo_dict = {}
@@ -25,6 +25,7 @@ if __name__ == "__main__":
                 todo_dict.update({"task": todo['title']})
                 todo_dict.update({"completed": todo['completed']})
                 usr_todo.append(todo_dict)
+            print(usr_todo)
             new = {usr: usr_todo}
             with open(usr + '.json', mode='a+') as f:
                 f.write(json.dumps(new))
