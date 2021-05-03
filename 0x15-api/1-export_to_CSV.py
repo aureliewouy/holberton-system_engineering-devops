@@ -19,8 +19,7 @@ if __name__ == "__main__":
                 .format(usr)
             todos = requests.get(api_todo).json()
             with open(usr + '.csv', mode='w') as csv_file:
-                wr = csv.writer(csv_file, delimiter=',',
-                                quoting=csv.QUOTE_ALL)
+                wr = csv.writer(csv_file, quoting=csv.QUOTE_ALL)
                 for todo in todos:
                     wr.writerow([usr, usr_name, todo.get('completed'),
                                  todo.get('title')])
