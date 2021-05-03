@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ Python script to export data in the JSON format """
-import requests
-from sys import argv
-import json
 
 
 if __name__ == "__main__":
     """code should not be executed when imported"""
+    import requests
+    from sys import argv
+    import json
+
     api_user = "https://jsonplaceholder.typicode.com/users/"
     users = requests.get(api_user).json()
     new = {}

@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ Python script that, using this REST API """
-import requests
-from sys import argv
-import json
 
 
 if __name__ == "__main__":
     """code should not be executed when imported"""
+    import requests
+    from sys import argv
+    import json
+
     if len(argv) == 2:
         usr = argv[1]
         if usr.isdigit():
