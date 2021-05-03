@@ -18,7 +18,7 @@ if __name__ == "__main__":
             api_todo = 'https://jsonplaceholder.typicode.com/todos/?userId={}'\
                 .format(usr)
             todos = requests.get(api_todo).json()
-            with open(usr + '.csv', mode='a+') as csv_file:
+            with open(usr + '.csv', mode='w') as csv_file:
                 wr = csv.writer(csv_file, delimiter=',',
                                 quoting=csv.QUOTE_ALL)
                 for todo in todos:
