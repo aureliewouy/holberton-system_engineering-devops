@@ -23,5 +23,5 @@ if __name__ == "__main__":
                          "completed": todo.get('completed')}
             usr_todo.append(todo_dict)
         new[usr_id] = usr_todo
-    with open('todo_all_employees.json', mode='a+') as f:
+    with open('todo_all_employees.json', mode='w') as f:
         f.write(json.dumps(new))

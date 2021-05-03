@@ -26,5 +26,5 @@ if __name__ == "__main__":
                 todo_dict.update({"completed": todo.get('completed')})
                 usr_todo.append(todo_dict)
             new = {usr: usr_todo}
-            with open(usr + '.json', mode='a+') as f:
+            with open(usr + '.json', mode='w') as f:
                 f.write(json.dumps(new))
