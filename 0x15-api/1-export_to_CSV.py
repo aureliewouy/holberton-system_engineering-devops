@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """ Python script to export data in the CSV format """
-import requests
-from sys import argv
-import csv
 
 
 if __name__ == "__main__":
     """code should not be executed when imported"""
+    import requests
+    from sys import argv
+    import csv
+
     if len(argv) == 2:
         usr = argv[1]
         if usr.isdigit():
@@ -16,19 +17,11 @@ if __name__ == "__main__":
             usr_name = resp.json().get("name")
             api_todo = 'https://jsonplaceholder.typicode.com/todos/?userId={}'\
                 .format(usr)
-            todos = requests.get(api_todo)
-            todos_title = todos.json()
-            total = 0
-            done = 0
+            todos = requests.get(api_todo).json()
             usr_todo = []
-            for todo in todos_title:
-                total += 1
-                completed = todo.get('completed')
-                if completed is True:
-                    usr_todo.append(todo['title'])
-                    done += 1
-
+            for todo in todos:
                 with open(usr + '.csv', mode='a+') as csv_file:
                     wr = csv.writer(csv_file, delimiter=',',
                                     quoting=csv.QUOTE_ALL)
-                    wr.writerow([usr, usr_name, completed, todo['title']])
+                    wr.writerow([usr, usr_name, todo.get('completed'),
+                                 todo.get('title')])
