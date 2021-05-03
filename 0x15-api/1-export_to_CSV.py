@@ -10,12 +10,12 @@ if __name__ == "__main__":
     if len(argv) == 2:
         usr = argv[1]
         if usr.isdigit():
-            api_user = "https://jsonplaceholder.typicode.com/users/{}"
-            .format(usr)
+            api_user = "https://jsonplaceholder.typicode.com/users/{}"\
+                .format(usr)
             resp = requests.get(api_user)
             usr_name = resp.json().get("name")
-            api_todo = 'https://jsonplaceholder.typicode.com/todos/?userId={}'
-            .format(usr)
+            api_todo = 'https://jsonplaceholder.typicode.com/todos/?userId={}'\
+                .format(usr)
             todos = requests.get(api_todo)
             todos_title = todos.json()
             total = 0
