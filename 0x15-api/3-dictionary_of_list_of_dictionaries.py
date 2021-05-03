@@ -24,4 +24,4 @@ if __name__ == "__main__":
             usr_todo.append(todo_dict)
         new[usr_id] = usr_todo
     with open('todo_all_employees.json', mode='w') as f:
-        json.dumps(new, f)
+        json.dump(new, f)
