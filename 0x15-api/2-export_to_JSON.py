@@ -16,14 +16,13 @@ if __name__ == "__main__":
             usr_name = resp.json().get("name")
             aptodo = 'https://jsonplaceholder.typicode.com/todos/?userId={}' \
                 .format(usr)
-            todos = requests.get(aptodo)
-            todos_title = todos.json()
+            todos = requests.get(aptodo).json()
             usr_todo = []
             todo_dict = {}
-            for todo in todos_title:
+            for todo in todos:
                 todo_dict.update({"username": usr_name})
-                todo_dict.update({"task": todo['title']})
-                todo_dict.update({"completed": todo['completed']})
+                todo_dict.update({"task": todo.get('title')})
+                todo_dict.update({"completed": todo.get('completed')})
                 usr_todo.append(todo_dict)
             new = {usr: usr_todo}
             with open(usr + '.json', mode='a+') as f:
