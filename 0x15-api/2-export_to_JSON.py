@@ -19,12 +19,11 @@ if __name__ == "__main__":
                 .format(usr)
             todos = requests.get(aptodo).json()
             usr_todo = []
-            todo_dict = {}
             for todo in todos:
-                todo_dict.update({"username": usr_name})
-                todo_dict.update({"task": todo.get('title')})
-                todo_dict.update({"completed": todo.get('completed')})
+                todo_dict = {"task": todo.get('title'),
+                             "completed": todo.get('completed'),
+                             "username": usr_name}
                 usr_todo.append(todo_dict)
             new = {usr: usr_todo}
             with open(usr + '.json', mode='w') as f:
-                f.write(json.dumps(new))
+                json.dump(new, f)
