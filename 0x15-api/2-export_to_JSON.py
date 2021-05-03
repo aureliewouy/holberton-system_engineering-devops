@@ -14,7 +14,7 @@ if __name__ == "__main__":
             api_user = "https://jsonplaceholder.typicode.com/users/{}" \
                 .format(usr)
             resp = requests.get(api_user)
-            usr_name = resp.json().get("name")
+            usr_name = resp.json().get("username")
             aptodo = 'https://jsonplaceholder.typicode.com/todos/?userId={}' \
                 .format(usr)
             todos = requests.get(aptodo).json()

@@ -18,7 +18,7 @@ if __name__ == "__main__":
         todos = requests.get(aptodo).json()
         usr_todo = []
         for todo in todos:
-            todo_dict = {"username": user.get("name"),
+            todo_dict = {"username": user.get("username"),
                          "task": todo.get('title'),
                          "completed": todo.get('completed')}
             usr_todo.append(todo_dict)
