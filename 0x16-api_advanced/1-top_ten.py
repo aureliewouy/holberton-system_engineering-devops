@@ -14,5 +14,6 @@ def top_ten(subreddit):
     response = requests.get(url_api, headers=headers)
     if response.status_code == 404:
         print('None')
-    for posts in response.json().get('data').get("children"):
-        print(posts.get('data').get('title'))
+    else:
+        for posts in response.json().get('data').get('children'):
+            print(posts.get('data').get('title'))
