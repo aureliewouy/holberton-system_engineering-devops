@@ -13,6 +13,8 @@ def recurse(subreddit, hot_list=[], count=0):
     url_api = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     headers = {'User-agent': 'My_user_agent'}
     response = requests.get(url_api, headers=headers, allow_redirects=False)
+    if response.status_code == 404:
+        return None
     try:
         data = response.json().get('data').get("children")[count]\
                                           .get("data").get("title")
