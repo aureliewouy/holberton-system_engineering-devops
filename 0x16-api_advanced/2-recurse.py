@@ -15,11 +15,12 @@ def recurse(subreddit, hot_list=[], count=0):
     response = requests.get(url_api, headers=headers, allow_redirects=False)
     if response.status_code == 404:
         return None
-    try:
-        data = response.json().get('data').get("children")[count]\
+    else:
+        try:
+            data = response.json().get('data').get("children")[count]\
                                           .get("data").get("title")
-        hot_list.append(data)
-    except:
-        return None
-    recurse(subreddit, hot_list, count=count+1)
-    return hot_list
+            hot_list.append(data)
+        except:
+            return None
+        recurse(subreddit, hot_list, count=count+1)
+        return hot_list
